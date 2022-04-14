@@ -5,14 +5,16 @@ let express = require('express'),
     bodyParser = require('body-parser'),
     dbConfig = require('./db/database');
 
+console.log(dbConfig);
+
 // Connecting mongoDB
-mongoose.Promise = global.Promise;
-mongoose.connect(dbConfig.db, {
-    useNewUrlParser: true
-}).then(() => {
-        console.log('Database connected')
-    },
-    error => {
-        console.log('Database could not be connected : ' + error)
-    }
-)
+// mongoose.Promise = global.Promise;
+// mongoose.connect(dbConfig.db, {
+//     useNewUrlParser: true
+// }).then(() => {
+//         console.log('Database connected')
+//     },
+//     error => {
+//         console.log('Database could not be connected : ' + error)
+//     }
+// )
