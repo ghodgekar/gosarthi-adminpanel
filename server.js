@@ -3,9 +3,9 @@ let express = require('express'),
     mongoose = require('mongoose'),
     cors = require('cors'),
     bodyParser = require('body-parser'),
-    dbConfig = require('./db/database');
-
-console.log(dbConfig);
+//     dbConfig = require('./db/database');
+let dbvalue = {db: 'mongodb+srv://surabhi:surabhi30@adminpanel.wre4o.mongodb.net/test'}
+console.log(dbvalue);
 
 // Connecting mongoDB
 // mongoose.Promise = global.Promise;
