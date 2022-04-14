@@ -6,13 +6,7 @@ const studentExpressRoute = express.Router();
 let StudentSchema = require('../model/student.model');
 // Get users
 studentExpressRoute.route('/').get((req, res) => {
-    StudentSchema.find((error, data) => {
-        if (error) {
-            return next(error)
-        } else {
-            res.json(data)
-        }
-    })
+   console.log("surabhi");
 })
 // Create user
 studentExpressRoute.route('/create-student').post((req, res, next) => {
