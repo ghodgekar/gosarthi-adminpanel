@@ -5,8 +5,7 @@ let express = require('express'),
     bodyParser = require('body-parser'),
     dbConfig = require('./db/database');
 
-console.log(dbConfig);
-alert("testing");
+
 // Connecting mongoDB
 mongoose.Promise = global.Promise;
 mongoose.connect(dbConfig.db, {
@@ -21,6 +20,8 @@ mongoose.connect(dbConfig.db, {
 // Setting up express
 const app = express();
 app.get('/', function(req, res){
+    console.log(dbConfig);
+alert("testing");
 res.json({"tutorial" : "Build REST API with node.js"});
 });
 app.use(bodyParser.json());
