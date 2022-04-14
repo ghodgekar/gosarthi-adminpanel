@@ -21,7 +21,7 @@ mongoose.connect(dbConfig.db, {
 const app = express();
 app.get('/', function(req, res){
     console.log(dbConfig);
-alert("testing");
+console.log("Hello World")
 res.json({"tutorial" : "Build REST API with node.js"});
 });
 app.use(bodyParser.json());
