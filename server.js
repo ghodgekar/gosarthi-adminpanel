@@ -5,27 +5,30 @@ let express = require('express'),
     bodyParser = require('body-parser'),
     dbConfig = require('./db/database');
 
-// Connecting mongoDB
-mongoose.Promise = global.Promise;
-mongoose.connect(dbConfig.db, {
-    useNewUrlParser: true
-}).then(() => {
-        console.log('Database connected')
-    },
-    error => {
-        console.log('Database could not be connected : ' + error)
-    }
-)
+// // Connecting mongoDB
+// mongoose.Promise = global.Promise;
+// mongoose.connect(dbConfig.db, {
+//     useNewUrlParser: true
+// }).then(() => {
+//         console.log('Database connected')
+//     },
+//     error => {
+//         console.log('Database could not be connected : ' + error)
+//     }
+// )
 // Setting up express
 const app = express();
+app.get('/', function(req, res){
+res.json({"tutorial" : "Build REST API with node.js"});
+});
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
 app.use(cors());
 // Api root
-const userRoute = require('./routes/student.route')
-app.use('/endpoint', userRoute)
+// const userRoute = require('./routes/student.route')
+// app.use('/endpoint', userRoute)
 // Create port
 const port = process.env.PORT || 8080;
 // Conectting port
