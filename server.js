@@ -6,7 +6,7 @@ let express = require('express'),
     dbConfig = require('./db/database');
 
 console.log(dbConfig);
-console.log("testing");
+alert("testing");
 // Connecting mongoDB
 mongoose.Promise = global.Promise;
 mongoose.connect(dbConfig.db, {
