@@ -22,7 +22,7 @@ const app = express();
 app.get('/', function(req, res){
     console.log(dbConfig);
 console.log("Hello World")
-res.json({"tutorial" : dbConfig});
+res.json({"tutorial" : dbConfig.db});
 });
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
