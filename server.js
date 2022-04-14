@@ -22,3 +22,8 @@ const app = express();
 app.get('/', function(req, res){
 res.json({"tutorial" : "Build REST API with node.js"});
 });
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+app.use(cors());
