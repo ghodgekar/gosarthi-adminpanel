@@ -30,8 +30,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cors());
 // Api root
-// const userRoute = require('./routes/student.route')
-// app.use('/endpoint', userRoute)
+const userRoute = require('./routes/student.route')
+app.use('/endpoint', userRoute)
 // Create port
 const port = process.env.PORT || 8080;
 // Conectting port
