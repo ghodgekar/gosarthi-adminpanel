@@ -6,7 +6,6 @@ const studentExpressRoute = express.Router();
 let StudentSchema = require('../model/student.model');
 // Get users
 studentExpressRoute.route('/getallstudent').get((req, res) => {
-    res.json({"tutorial" : "avx"});
     StudentSchema.find((error, data) => {
         if (error) {
             return next(error)
