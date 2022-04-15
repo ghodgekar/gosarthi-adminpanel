@@ -7,7 +7,14 @@ let StudentSchema = require('../model/student.model');
 // Get users
 studentExpressRoute.route('/test').get((req, res) => {
    console.log("surabhi");
-   res.json({"tutorial" : "abc"});
+   
+    StudentSchema.find((error, data) => {
+        if (error) {
+            return next(error)
+        } else {
+            res.json(data)
+        }
+    })
 })
 // Create user
 studentExpressRoute.route('/create-student').post((req, res, next) => {
