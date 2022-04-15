@@ -5,7 +5,7 @@ const studentExpressRoute = express.Router();
 // User schema
 let StudentSchema = require('../model/student.model');
 // Get users
-studentExpressRoute.route('/test').get((req, res) => {
+studentExpressRoute.route('/').get((req, res) => {
    console.log("surabhi");
    
     StudentSchema.find((error, data) => {
